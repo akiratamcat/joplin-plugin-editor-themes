@@ -1,0 +1,39 @@
+# German translation for Editor Themes i18n (Joplin plugin).
+# This is a personal test build; translations may be machine-assisted.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-editor-themes-i18n 1.1.0\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Editor Themes"
+msgstr "Editor-Themes"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Theme"
+msgstr "Theme"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Sets the editor theme"
+msgstr "Legt das Theme des Editors fest"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Theme precedence"
+msgstr "Theme-Priorität"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Set to High to make theme take precedence over Joplin's default theme"
+msgstr "Auf „Hoch“ setzen, damit das Theme Vorrang vor dem Standard-Theme von Joplin hat"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "High"
+msgstr "Hoch"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Normal"
+msgstr "Normal"

@@ -1,14 +1,17 @@
 import { RawSettings } from "api/JoplinSettings"
 import { ExtendedSettingSection, SettingItemType } from "api/types"
 
+import { Translate } from "@joplin-plugin/i18n/I18n"
 import { PluginSettings } from "@joplin-plugin/settings/PluginSettings"
 
 /**
- * Represents the {@link ExtendedSettingSection} of the Joplin plugin.
+ * Creates the {@link ExtendedSettingSection} of the Joplin plugin with UI strings localized by {@link _}.
  * The settings correspond directly to those defined in {@link PluginSettings}.
+ *
+ * Theme names are proper nouns and intentionally left untranslated.
  */
-export const PluginSettingSection = {
-  label: "Editor Themes",
+export const createPluginSettingSection = (_: Translate) => ({
+  label: _("Editor Themes"),
   // Font Awesome code icon
   // https://fontawesome.com/v5/icons/brush?f=classic&s=solid
   iconName: "fa fa-solid fa-brush",
@@ -94,8 +97,8 @@ export const PluginSettingSection = {
         "xcodeDark": "Xcode Dark",
         "xcodeLight": "Xcode Light",
       },
-      label: "Theme",
-      description: "Sets the editor theme",
+      label: _("Theme"),
+      description: _("Sets the editor theme"),
     },
     themePrecedence: {
       type: SettingItemType.String,
@@ -103,16 +106,21 @@ export const PluginSettingSection = {
       value: "high",
       isEnum: true,
       options: {
-        "high": "High",
-        "normal": "Normal",
+        "high": _("High"),
+        "normal": _("Normal"),
       },
-      label: "Theme precedence",
-      description: "Set to High to make theme take precedence over Joplin's default theme",
+      label: _("Theme precedence"),
+      description: _("Set to High to make theme take precedence over Joplin's default theme"),
     }
   },
-} as const satisfies ExtendedSettingSection<PluginSettings>
+} as const satisfies ExtendedSettingSection<PluginSettings>)
+
+/**
+ * Represents the {@link ExtendedSettingSection} of the Joplin plugin.
+ */
+export type PluginSettingSection = ReturnType<typeof createPluginSettingSection>
 
 /**
  * Represents the type of the {@link PluginSettingSection} settings.
  */
-export type RawPluginSettings = RawSettings<(typeof PluginSettingSection)["settings"]>
+export type RawPluginSettings = RawSettings<PluginSettingSection["settings"]>

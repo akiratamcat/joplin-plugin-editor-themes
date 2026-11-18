@@ -34,6 +34,15 @@
 
 <div align="center"><img src="https://raw.githubusercontent.com/ckant/joplin-plugin-editor-themes/main/media/preview.png" alt="preview" width="95%"></div>
 
+> [!NOTE]
+> **Editor Themes i18n** — this fork is a personal, unofficial test build of [Editor Themes](https://github.com/ckant/joplin-plugin-editor-themes) by Chris Kant.
+> It adds gettext (PO file) based UI translation that follows Joplin's language setting
+> (Japanese, Simplified Chinese, Traditional Chinese, Korean, German, French, Spanish, Italian, Brazilian Portuguese, Russian).
+> It uses a separate plugin ID (`com.ckant.joplin-plugin-editor-themes-i18n`). Translations live in [`src/locales`](src/locales).
+>
+> このフォークは、Chris Kant 氏の [Editor Themes](https://github.com/ckant/joplin-plugin-editor-themes) に、
+> gettext（PO ファイル）による UI 翻訳を追加した個人的な非公式テスト版です。UI の言語は Joplin の言語設定に合わせて自動的に切り替わります。
+
 ## Features
 
 - Applies 70+ editor themes from [react-codemirror](https://github.com/uiwjs/react-codemirror), [@fsegurai/codemirror-themes](https://github.com/fsegurai/codemirror-themes), and [@codemirror/theme-one-dark](https://github.com/codemirror/theme-one-dark), including VSCode, GitHub, Sublime, and One Dark

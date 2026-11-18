@@ -6,6 +6,11 @@ export interface FakeJoplinSettingsProps {
    * The pre-defined settings retrievable with {@link JoplinSettings#value} (defaults to none).
    */
   values?: Record<string, unknown>
+
+  /**
+   * The pre-defined global settings retrievable with {@link JoplinSettings#globalValue} (defaults to none).
+   */
+  globalValues?: Record<string, unknown>
 }
 
 export type FakeJoplinSettings = JoplinSettings & Extensions
@@ -17,7 +22,7 @@ export namespace FakeJoplinSettings {
 
 type PartialJoplinSettings = Pick<
   JoplinSettings,
-  "onChange" | "registerSection" | "registerSettings" | "value"
+  "globalValue" | "onChange" | "registerSection" | "registerSettings" | "value"
 >
 
 export interface Extensions {
@@ -42,6 +47,7 @@ export interface Extensions {
 // noinspection JSUnusedGlobalSymbols
 class ExtendedJoplinSettings implements PartialJoplinSettings, Extensions {
   private readonly values: Record<string, unknown>
+  private readonly globalValues: Record<string, unknown>
 
   // noinspection JSUnusedGlobalSymbols
   readonly ext = new (class {
@@ -52,6 +58,7 @@ class ExtendedJoplinSettings implements PartialJoplinSettings, Extensions {
 
   constructor(props?: FakeJoplinSettingsProps) {
     this.values = props?.values ?? {}
+    this.globalValues = props?.globalValues ?? {}
   }
 
   onChange(changeHandler: ChangeHandler): Promise<void> {
@@ -61,6 +68,10 @@ class ExtendedJoplinSettings implements PartialJoplinSettings, Extensions {
 
   value(key: string): Promise<unknown> {
     return Promise.resolve(new Map(Object.entries(this.values)).get(key))
+  }
+
+  globalValue(key: string): Promise<unknown> {
+    return Promise.resolve(new Map(Object.entries(this.globalValues)).get(key))
   }
 
   registerSection(name: string, section: SettingSection): Promise<void> {

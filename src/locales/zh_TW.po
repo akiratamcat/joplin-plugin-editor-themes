@@ -1,0 +1,39 @@
+# Chinese (Traditional) translation for Editor Themes i18n (Joplin plugin).
+# This is a personal test build; translations may be machine-assisted.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-editor-themes-i18n 1.1.0\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Editor Themes"
+msgstr "編輯器主題"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Theme"
+msgstr "主題"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Sets the editor theme"
+msgstr "設定編輯器主題"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Theme precedence"
+msgstr "主題優先順序"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Set to High to make theme take precedence over Joplin's default theme"
+msgstr "設為「高」可讓此主題優先於 Joplin 的預設主題"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "High"
+msgstr "高"
+
+#: src/joplin-plugin/settings/PluginSettingSection.ts
+msgid "Normal"
+msgstr "一般"

@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/ckant/joplin-plugin-editor-themes/compare/v1.1.0...HEAD)
 
+## 1.1.0-i18n.1 (fork test build) - 2026-11-18
+
+### Added
+
+- UI translation with gettext PO files, switched automatically by Joplin's language setting
+  (ja_JP, zh_CN, zh_TW, ko, de, fr, es, it, pt_BR, ru); theme names stay in English
+
+### Changed
+
+- Rename plugin to "Editor Themes i18n" with ID `com.ckant.joplin-plugin-editor-themes-i18n`
+  so that it can be installed alongside the original plugin
+
 ## [1.1.0](https://github.com/ckant/joplin-plugin-editor-themes/compare/v1.0.4...v1.1.0) - 2026-03-09
 
 ### Added

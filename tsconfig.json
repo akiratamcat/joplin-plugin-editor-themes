@@ -8,6 +8,7 @@
     "baseUrl": ".",
     "strict": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "noImplicitReturns": true,
     "paths": {
       "@ts-belt": ["src/ext/ts-belt/alias"],
@@ -17,6 +18,7 @@
       "@content-script/*": ["src/content-script/*"],
       "@joplin-plugin/*": ["src/joplin-plugin/*"],
       "@joplin-plugin-ipc/*": ["src/joplin-plugin-ipc/*"],
+      "@locales/*": ["src/locales/*"],
     },
     "typeRoots": ["./node_modules/@types", "./types"],
   }

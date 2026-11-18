@@ -229,6 +229,11 @@ const baseConfig = {
         use: "ts-loader",
         exclude: /node_modules/,
       },
+      {
+        // Bundle PO translation files as plain strings (`import po from "@locales/ja_JP.po?raw"`)
+        resourceQuery: /raw/,
+        type: "asset/source",
+      },
     ],
   },
   ...userConfig.webpackOverrides,

@@ -13,9 +13,10 @@ import { CmExtensionClient } from "@cm-extension-ipc/CmExtensionClient"
 import { CmExtensionRequestHandler } from "@cm-extension-ipc/model/handler"
 
 import { RequestHandler } from "@joplin-plugin/handler/RequestHandler"
+import { PoFiles } from "@joplin-plugin/i18n/PoFiles"
 import { JoplinPlugin } from "@joplin-plugin/JoplinPlugin"
 import { PluginSettings } from "@joplin-plugin/settings/PluginSettings"
-import { PluginSettingSection } from "@joplin-plugin/settings/PluginSettingSection"
+import { createPluginSettingSection } from "@joplin-plugin/settings/PluginSettingSection"
 import { PluginSettingsProvider } from "@joplin-plugin/settings/PluginSettingsProvider"
 
 /**
@@ -45,7 +46,8 @@ function registerPlugin(): void {
     requestHandler: RequestHandler.create({
       pluginSettingsProvider: PluginSettingsProvider.create({ joplinSettings: joplin.settings }),
     }),
-    settingSection: PluginSettingSection,
+    createSettingSection: createPluginSettingSection,
+    poFiles: PoFiles,
   })
 }
 
